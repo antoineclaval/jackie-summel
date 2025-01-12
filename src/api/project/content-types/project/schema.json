@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Date": {
+      "type": "integer"
+    },
+    "ParentVine": {
+      "type": "enumeration",
+      "enum": [
+        "Main Vine-1",
+        "Main VIne > Herman's House-2",
+        "Hermans House > Solitary Gardens-3",
+        "Solitary Gardens > Apothecary-4",
+        "Solitary Gardens > Apothecarts-4",
+        "Solitary Gardens > Moms-4",
+        "Solitary Gardens > Tea Party-4",
+        "Solitary Gardens > Sanctuary-4",
+        "Solitary Gardens > JTLC-4"
+      ]
+    },
+    "Hyperlinks": {
+      "type": "string"
+    },
+    "Locations": {
+      "type": "string"
+    },
+    "VenueInstitute": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    },
+    "Collaborators": {
+      "type": "string"
+    },
+    "Type": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project-type.project-type"
+    },
+    "Tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
+    }
+  }
+}
