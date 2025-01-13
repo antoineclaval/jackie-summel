@@ -67,20 +67,24 @@ sudo apt install -y nodejs
 
 sudo npm install -g strapi@latest
 
-# adding a swap file 
-
+### adding a swap file 
+```
 sudo fallocate -l 2G /swapfile
 sudo chmod 600 /swapfile
 sudo mkswap /swapfile
 sudo swapon /swapfile
 swapon --show
 echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+```
 
-
-#Starting up
+###Starting up
+```
 NODE_ENV=production NODE_OPTIONS="--max-old-space-size=2048" npm run build
+```
 OR
+```
 pm2 start npm --name strapi -- start --watch --time \
   --env production --node-args="--max-old-space-size=2048"
 pm2 save
 pm2 startup
+```
