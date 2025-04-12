@@ -17,6 +17,30 @@ module.exports = {
           auth: false,
         },
       },
+      {
+        method: 'GET',
+        path: '/projects/vine-structure-data',
+        handler: 'project.vineStructureData', 
+        config: {
+          auth: false,
+        },
+      },
+      {
+        method: 'POST',
+        path: '/projects/upload-csv',
+        handler: 'project.uploadCsv', // Ensure you have this method in your controller to handle CSV uploads
+        config: {
+          auth: false,
+        },
+      },
+      {
+        method: 'POST',
+        path: '/projects/test-upload-csv',
+        handler: 'project.testUpload', // Ensure you have this method in your controller to handle CSV uploads
+        config: {
+          auth: false,
+        },
+      },
       // Default Strapi routes for the "projects" API
       {
         method: 'GET',

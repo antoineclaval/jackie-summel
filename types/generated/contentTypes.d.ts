@@ -432,14 +432,14 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     ParentVine: Schema.Attribute.Enumeration<
       [
         'Main Vine-1',
-        "Main VIne > Herman's House-2",
-        'Hermans House > Solitary Gardens-3',
-        'Solitary Gardens > Apothecary-4',
-        'Solitary Gardens > Apothecarts-4',
-        'Solitary Gardens > Moms-4',
-        'Solitary Gardens > Tea Party-4',
-        'Solitary Gardens > Sanctuary-4',
-        'Solitary Gardens > JTLC-4',
+        "Main Vine-2 > Herman's House",
+        'Hermans House-3 > Solitary Gardens',
+        'Solitary Gardens-4 > Apothecary',
+        'Solitary Gardens-4 > Apothecarts',
+        'Solitary Gardens-4 > Moms',
+        'Solitary Gardens-4 > Tea Party',
+        'Solitary Gardens-4 > Sanctuary',
+        'Solitary Gardens-4 > JTLC',
       ]
     >;
     publishedAt: Schema.Attribute.DateTime;
